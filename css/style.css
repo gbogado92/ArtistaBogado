@@ -7,6 +7,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
 }
 
 
@@ -37,6 +38,11 @@ body {
     padding: 0 15px;
     text-decoration: none;
     cursor: pointer;
+    color: #181818;
+}
+
+.navbar .menu a:hover {
+    color: white;
 }
 
 .navbar .menu-bar {
@@ -74,13 +80,117 @@ body {
 
     }
 
+    .menu-contenedor .info-contenido {
+        grid-column: 2 / 10;
+        grid-row: 5 / 8;
+    }
+
+    .menu-contenedor .info-contenido h1 {
+        font-size: 1.5em;
+    }
+
+    .footer .seguime {
+        display: none;
+    }
+
 }
 
 /* SECTION MAIN */
 
 .menu-contenedor {
     height: 80vh;
-    background-image: url(../img/cantante1.jpg);
+    background-image: linear-gradient(rgba(16, 16, 16, .5),rgba(16, 16, 16, .6)), url(../img/bg.jpg);
     background-size: cover;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
 }
 
+.info-contenido {
+    grid-column: 7 / 10;
+    grid-row: 3 / 5;
+    color: white;
+}
+
+.menu-contenedor h3 {
+    font-family: 'monserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.menu-contenedor h1 {
+    font-family: 'monserrat', sans-serif;
+    font-size: 3em;
+    color: yellow;
+}
+
+.menu-contenedor .btn {
+    font-size: 1em;
+    background: none;
+    color: white;
+    padding: 10px;
+    border: 1px solid yellow;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+.menu-contenedor .btn:hover {
+    background-color: yellow;
+}
+
+/* SECTION FOOTER */
+
+.footer {
+    display: grid;
+    height: 80px;
+    align-items: center;
+    background-color: #181818;
+    color: white;
+    grid-template-areas: 
+    "escuchame  seguime social";
+}
+
+.footer .escuchame {
+    grid-area: escuchame;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    padding: 26px;
+    color: #181818;
+}
+
+.footer .escuchame .fa-solid {
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.footer .seguime {
+    grid-area: seguime;
+    text-align: center;
+}
+
+.footer .social {
+    grid-template-areas: social;
+    font-size: 1.3em;
+}
+
+
+.footer .social .fa-brands {
+    margin-right: 20px;
+}
+
+
+.footer .social .fa-brands:hover {
+    color: yellow;
+}
+
+
+.social {
+    padding-left: 20px;
+}
+
+form div {
+    margin-top: 10px;
+}
