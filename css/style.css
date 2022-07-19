@@ -194,3 +194,15 @@ body {
 form div {
     margin-top: 10px;
 }
+
+.menu-contenedor-bio {
+    background-color: white;
+    padding: 50px;
+    height: 80vh;
+    overflow: scroll;
+}
+
+.menu-contenedor-bio p {
+    color: black;
+    text-align: center;
+}
